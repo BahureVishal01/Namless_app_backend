@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "b796b462-c0a5-4d58-a868-341c184b2b63",
+		"name": "job listing APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43998392",
+		"_collection_link": "https://vishal-4202391.postman.co/workspace/vishal's-Workspace~22468531-0431-450d-8e66-b23e389d1316/collection/43998392-b796b462-c0a5-4d58-a868-341c184b2b63?action=share&source=collection_link&creator=43998392"
+	},
+	"item": [
+		{
+			"name": "create job",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyName\": \"curv.ai\",\r\n  \"companyLogo\": \"https://example.com/logo.png\",\r\n  \"jobTitle\": \"Software Engineer\",\r\n  \"jobType\": \"Temporary\",\r\n  \"location\": \"San Francisco, CA\",\r\n  \"salary\": 120000.00,\r\n  \"descriptions\": \"We're looking for a software engineer to join our team.\",\r\n  \"workExperience\": \"Internship\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/v1/jobs/create",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"jobs",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subscribe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"email\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/v1/subscribedUsers/subscribe",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"subscribedUsers",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload resume",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "resume",
+							"type": "file",
+							"src": "nashville-predators-1-logo-svgrepo-com.svg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/v1/actions/upload-resume",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"actions",
+						"upload-resume"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jobs list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyName\": \"curv.ai\",\r\n  \"companyLogo\": \"https://example.com/logo.png\",\r\n  \"jobTitle\": \"Software Engineer\",\r\n  \"jobType\": \"Temporary\",\r\n  \"location\": \"San Francisco, CA\",\r\n  \"salary\": 120000.00,\r\n  \"descriptions\": \"We're looking for a software engineer to join our team.\",\r\n  \"workExperience\": \"Internship\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/v1/jobs/list",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"jobs",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
