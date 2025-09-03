@@ -13,7 +13,7 @@ app.use(cors());
 // Start server
 AppDB.initialize()
   .then(() => {
-    console.log("Database connected ✅");
+    console.log("Database connected");
 
     app.use("/api/v1", (appRoutes));
 

@@ -3,7 +3,7 @@ import { DataSource } from "typeorm";
 import { Job } from "./entity/jobs";
 import { CallToAction } from "./entity/callToAction";
 import { SubscribedUser } from "./entity/subscribedUser";
-// import { User } from "./entity/User";
+
 
 export const AppDB = new DataSource({
   type: "postgres",
@@ -11,7 +11,7 @@ export const AppDB = new DataSource({
   port: 5432,
   username: process.env.DB_USERNAME || "postgres" , 
   password: process.env.DB_PASSWORD || "root",   
-  database: process.env.DB_NAME || "namless_db",   
+  database: process.env.DB_NAME || "namless_app_db",   
   synchronize: true,     
   logging: true,
   entities: [Job, CallToAction, SubscribedUser],

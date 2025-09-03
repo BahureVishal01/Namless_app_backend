@@ -64,7 +64,7 @@ export class JobService {
     }
 
     if (salary) {
-      query.andWhere("job.salary <=:salary", { salary: salary });
+      query.andWhere("job.salary >=:salary", { salary: salary });
     }
 
     if (datePosted) {
